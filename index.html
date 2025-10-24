@@ -30,6 +30,14 @@
         .custom-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        
+        .loading {
+            display: none;
+        }
+        
+        .error-message {
+            display: none;
+        }
     </style></head>
 <body class="font-sans antialiased">
     
@@ -149,155 +157,13 @@
                 
                 <!-- Contenido principal -->
                 <main class="flex-1">
-                    <div class="py-12 bg-gray-50">
+                    <div class="py-12 bg-gray-50" id="contenido-permiso">
+                        <!-- El contenido se cargará dinámicamente mediante JavaScript -->
                         <div class="max-w-7xl mx-auto px-4 lg:px-8">
                             <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-                                <div>
-                                    <!-- Encabezado del certificado -->
-                                    <div class="p-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white flex items-center justify-between">
-                                        <h3 class="text-lg font-bold">
-                                            PERMISO CERTIFICADO
-                                        </h3>
-                                    </div>
-                                    
-                                    <!-- Contenido del certificado -->
-                                    <div class="p-6">
-                                        <!-- Imagen del certificado -->
-                                        <div class="text-center mb-6">
-                                            <img 
-                                                src="/images/img-permiso-certificado.png" 
-                                                alt="Certificado de permiso" 
-                                                class="rounded-lg shadow-md mx-auto" 
-                                                style="max-width: 200px;">
-                                        </div>
-                                        
-                                        <!-- Detalles del permiso -->
-                                        <div class="p-6 rounded-lg shadow-inner bg-gray-50">
-                                            <h4 class="text-xl font-semibold text-gray-800 mb-4 text-center border-b pb-2">
-                                                Detalles del Permiso
-                                            </h4>
-                                            
-                                            <!-- Cuadrícula de detalles -->
-                                            <div class="grid grid-cols-2 gap-6">
-                                                <!-- Folio -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-file-text text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Folio:
-                                                        </label>
-                                                        <p class="text-gray-800 font-semibold">
-                                                            ALCO-56492
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Estatus -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-check-circle-fill text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Estatus:
-                                                        </label>
-                                                        <p class="text-green-600 font-semibold">
-                                                            vigente
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Marca -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-car-front text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Marca:
-                                                        </label>
-                                                        <p class="text-gray-800 truncate">
-                                                            KAWASAKI
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Línea -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-tags text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Línea:
-                                                        </label>
-                                                        <p class="text-gray-800 truncate">
-                                                            Z650 ABS
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Modelo -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-calendar text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Modelo:
-                                                        </label>
-                                                        <p class="text-gray-800 truncate">
-                                                            2024
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Color -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-palette text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Color:
-                                                        </label>
-                                                        <p class="text-gray-800 truncate">
-                                                            NEGRO
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Número de Serie -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-upc-scan text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Número de Serie:
-                                                        </label>
-                                                        <p class="text-gray-800 break-words">
-                                                            ML5EREN15RDAB7448
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Número de Motor -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-gear-fill text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Número de Motor:
-                                                        </label>
-                                                        <p class="text-gray-800 break-words">
-                                                            SIN NUMERO
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                
-                                                <!-- Fecha de Vigencia -->
-                                                <div class="flex items-start">
-                                                    <i class="bi bi-calendar2-check-fill text-gray-500 text-xl mr-3"></i>
-                                                    <div class="w-full">
-                                                        <label class="text-gray-700 font-medium block mb-1">
-                                                            Fecha de Vigencia:
-                                                        </label>
-                                                        <p class="text-gray-800 truncate">
-                                                            2025-11-23
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="p-8 text-center">
+                                    <i class="bi bi-hourglass-split text-blue-500 text-4xl mb-4"></i>
+                                    <p class="text-gray-600">Cargando información del permiso...</p>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +198,9 @@
         </div>
     </div>
 
-
+    <!-- Scripts -->
+    <script src="/js/permisos-db.js"></script>
+    <script src="/js/consulta-permisos.js"></script>
 </body>
 
 

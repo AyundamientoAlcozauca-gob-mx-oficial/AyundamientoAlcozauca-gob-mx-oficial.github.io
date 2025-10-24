@@ -178,6 +178,66 @@
                 </header>                
                 <!-- Contenido principal -->
                 <main class="flex-1 custom-background">
+                    <!-- Sección de Consulta de Permisos -->
+                    <div class="container mx-auto p-6">
+                        <h3 class="text-3xl font-semibold text-center text-gray-900 mb-6">
+                            Consulta tu Permiso Vehicular
+                        </h3>
+                        
+                        <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-12">
+                            <div class="text-center mb-6">
+                                <i class="bi bi-search text-blue-500 text-4xl mb-4"></i>
+                                <p class="text-gray-600">
+                                    Ingresa el folio de tu permiso para verificar su autenticidad y vigencia
+                                </p>
+                            </div>
+                            
+                            <form id="form-busqueda-permiso" class="space-y-4">
+                                <div>
+                                    <label for="folio-permiso" class="block text-sm font-medium text-gray-700 mb-2">
+                                        Folio del Permiso:
+                                    </label>
+                                    <div class="relative">
+                                        <input 
+                                            type="text" 
+                                            id="folio-permiso" 
+                                            name="folio" 
+                                            placeholder="Ejemplo: ALCO-56492"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-center font-mono text-lg uppercase"
+                                            maxlength="10"
+                                            pattern="ALCO-[0-9]{5}"
+                                            required>
+                                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <i class="bi bi-file-text text-gray-400"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        El formato debe ser: ALCO-XXXXX (donde X son números)
+                                    </p>
+                                </div>
+                                
+                                <button 
+                                    type="submit" 
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+                                    <i class="bi bi-search mr-2"></i>
+                                    Consultar Permiso
+                                </button>
+                            </form>
+                            
+                            <!-- Mensajes de estado -->
+                            <div id="mensaje-busqueda" class="mt-4 hidden">
+                                <div id="mensaje-error" class="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg hidden">
+                                    <i class="bi bi-exclamation-triangle mr-2"></i>
+                                    <span id="texto-error"></span>
+                                </div>
+                                <div id="mensaje-exito" class="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg hidden">
+                                    <i class="bi bi-check-circle mr-2"></i>
+                                    Redirigiendo a la información del permiso...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Sección de Enlaces Útiles -->
                     <div class="container mx-auto p-6">
                         <h3 class="text-3xl font-semibold text-center text-gray-900 mb-6">
@@ -513,5 +573,96 @@
             </footer>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="/js/permisos-db.js"></script>
+    <script>
+        // Script para manejar la búsqueda de permisos
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('form-busqueda-permiso');
+            const inputFolio = document.getElementById('folio-permiso');
+            const mensajeBusqueda = document.getElementById('mensaje-busqueda');
+            const mensajeError = document.getElementById('mensaje-error');
+            const mensajeExito = document.getElementById('mensaje-exito');
+            const textoError = document.getElementById('texto-error');
+            
+            // Formatear input mientras se escribe
+            inputFolio.addEventListener('input', function(e) {
+                let valor = e.target.value.toUpperCase().replace(/[^ALCO0-9-]/g, '');
+                
+                // Agregar formato ALCO- automáticamente
+                if (valor && !valor.startsWith('ALCO-')) {
+                    if (valor.startsWith('ALCO')) {
+                        valor = valor.substring(4);
+                    }
+                    valor = 'ALCO-' + valor.replace(/-/g, '');
+                }
+                
+                // Limitar a 10 caracteres (ALCO-XXXXX)
+                if (valor.length > 10) {
+                    valor = valor.substring(0, 10);
+                }
+                
+                e.target.value = valor;
+            });
+            
+            // Función para mostrar mensaje de error
+            function mostrarError(mensaje) {
+                textoError.textContent = mensaje;
+                mensajeError.classList.remove('hidden');
+                mensajeExito.classList.add('hidden');
+                mensajeBusqueda.classList.remove('hidden');
+            }
+            
+            // Función para mostrar mensaje de éxito
+            function mostrarExito() {
+                mensajeError.classList.add('hidden');
+                mensajeExito.classList.remove('hidden');
+                mensajeBusqueda.classList.remove('hidden');
+            }
+            
+            // Función para limpiar mensajes
+            function limpiarMensajes() {
+                mensajeBusqueda.classList.add('hidden');
+                mensajeError.classList.add('hidden');
+                mensajeExito.classList.add('hidden');
+            }
+            
+            // Manejar envío del formulario
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const folio = inputFolio.value.trim();
+                
+                // Limpiar mensajes previos
+                limpiarMensajes();
+                
+                // Validar que se ingresó un folio
+                if (!folio) {
+                    mostrarError('Por favor, ingrese el folio del permiso.');
+                    return;
+                }
+                
+                // Validar formato del folio
+                if (!validarFormatoFolio(folio)) {
+                    mostrarError('El formato del folio no es válido. Debe ser: ALCO-XXXXX (donde X son números)');
+                    return;
+                }
+                
+                // Buscar el permiso en la base de datos
+                const permiso = buscarPermiso(folio);
+                
+                if (permiso) {
+                    // Permiso encontrado - redirigir a index.html con el folio como parámetro
+                    mostrarExito();
+                    setTimeout(() => {
+                        window.location.href = `index.html?folio=${encodeURIComponent(folio)}`;
+                    }, 1500);
+                } else {
+                    mostrarError(`No se encontró ningún permiso con el folio "${folio}". Verifique que el número sea correcto.`);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
