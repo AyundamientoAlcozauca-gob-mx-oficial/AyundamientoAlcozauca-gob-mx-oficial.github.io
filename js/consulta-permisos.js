@@ -50,24 +50,54 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Funcion para verificar si un permiso esta vencido
+    function estaVencido(fechaVigencia) {
+        const fechaActual = new Date();
+        const fechaVencimiento = new Date(fechaVigencia);
+        
+        // Normalizar las fechas para comparar solo año, mes y día
+        fechaActual.setHours(0, 0, 0, 0);
+        fechaVencimiento.setHours(0, 0, 0, 0);
+        
+        return fechaVencimiento < fechaActual;
+    }
+
     // Funcion para mostrar permiso
     function mostrarPermiso(permiso) {
         const contenedor = document.getElementById('contenido-permiso');
         if (contenedor) {
-            // Determinar el color del estado
-            const estadoColor = permiso.estatus === 'vigente' ? 'text-green-600' : 'text-red-600';
-            const estadoTexto = permiso.estatus === 'vigente' ? 'VIGENTE' : 'VENCIDO';
+            // Verificar automáticamente si el permiso está vencido por fecha
+            const permisoVencido = estaVencido(permiso.fechaVigencia);
+            
+            // Determinar el color y texto del estado basado en la fecha de vigencia
+            const estadoColor = permisoVencido ? 'text-red-600' : 'text-green-600';
+            const estadoTexto = permisoVencido ? 'VENCIDO' : 'VIGENTE';
+            const estadoIcono = permisoVencido ? 'bi-exclamation-triangle-fill text-red-500' : 'bi-shield-check text-blue-500';
+            const estadoBadge = permisoVencido ? 'bg-red-500' : 'bg-green-500';
             
             contenedor.innerHTML = `
+                ${permisoVencido ? `
+                <div class="max-w-7xl mx-auto px-4 lg:px-8 mb-4">
+                    <div class="bg-red-50 border-l-4 border-red-400 p-4 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="bi bi-exclamation-triangle-fill text-red-500 text-xl mr-3"></i>
+                            <div>
+                                <h4 class="text-red-800 font-semibold">¡Permiso Vencido!</h4>
+                                <p class="text-red-600 text-sm">Este permiso ha expirado el ${formatearFecha(permiso.fechaVigencia)}. No es válido para circular.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ` : ''}
                 <div class="max-w-7xl mx-auto px-4 lg:px-8">
                     <div class="bg-white shadow-xl rounded-xl overflow-hidden">
-                        <div class="p-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white flex items-center justify-between">
+                        <div class="p-6 bg-gradient-to-r ${permisoVencido ? 'from-red-500 to-red-600' : 'from-blue-500 to-blue-600'} text-white flex items-center justify-between">
                             <h3 class="text-lg font-bold">
-                                <i class="bi bi-shield-check mr-2"></i>
-                                PERMISO CERTIFICADO
+                                <i class="${estadoIcono} mr-2"></i>
+                                PERMISO ${permisoVencido ? 'VENCIDO' : 'CERTIFICADO'}
                             </h3>
-                            <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
-                                Valido 
+                            <span class="${estadoBadge} px-3 py-1 rounded-full text-sm font-semibold">
+                                ${estadoTexto} ${permisoVencido ? '❌' : '✓'}
                             </span>
                         </div>
                         

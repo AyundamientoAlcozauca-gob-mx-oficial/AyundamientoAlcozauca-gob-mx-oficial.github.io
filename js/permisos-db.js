@@ -59,6 +59,30 @@ const PERMISOS_DB = {
         numeroMotor: 'DURATEC123456',
         fechaVigencia: '2026-01-15',
         imagen: '/images/img-permiso-certificado.png'
+    },
+    'ALCO-56497': {
+        folio: 'ALCO-56497',
+        estatus: 'vigente',
+        marca: 'CHEVROLET',
+        linea: 'AVEO',
+        modelo: '2019',
+        color: 'PLATA',
+        numeroSerie: 'CH1234567890123456',
+        numeroMotor: 'ECOTEC123456',
+        fechaVigencia: '2024-05-10',
+        imagen: '/images/img-permiso-certificado.png'
+    },
+    'ALCO-56498': {
+        folio: 'ALCO-56498',
+        estatus: 'vigente',
+        marca: 'VOLKSWAGEN',
+        linea: 'JETTA',
+        modelo: '2018',
+        color: 'NEGRO',
+        numeroSerie: 'VW1234567890123456',
+        numeroMotor: 'TSI123456',
+        fechaVigencia: '2023-12-20',
+        imagen: '/images/img-permiso-certificado.png'
     }
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
     // y crea un nuevo objeto siguiendo el mismo formato:
