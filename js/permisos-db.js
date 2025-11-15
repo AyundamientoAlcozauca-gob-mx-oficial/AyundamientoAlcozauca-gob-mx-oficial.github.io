@@ -95,6 +95,18 @@ const PERMISOS_DB = {
         numeroMotor: 'NA',
         fechaVigencia: '2025-12-09',
         imagen: '/images/img-permiso-certificado.png'
+    },
+        'ALCO-56500': {
+        folio: 'ALCO-56499',
+        estatus: 'vigente',
+        marca: 'KAWASAKI',
+        linea: 'NINJA',
+        modelo: '2017',
+        color: 'NARANJA',
+        numeroSerie: 'JKAEXEK11HDA00420',
+        numeroMotor: 'NA',
+        fechaVigencia: '2025-12-16',
+        imagen: '/images/img-permiso-certificado.png'
     }
 
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
