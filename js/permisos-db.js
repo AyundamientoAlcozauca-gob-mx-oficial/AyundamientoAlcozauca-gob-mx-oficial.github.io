@@ -97,7 +97,7 @@ const PERMISOS_DB = {
         imagen: '/images/img-permiso-certificado.png'
     },
         'ALCO-56500': {
-        folio: 'ALCO-56499',
+        folio: 'ALCO-56500',
         estatus: 'vigente',
         marca: 'KAWASAKI',
         linea: 'NINJA',
