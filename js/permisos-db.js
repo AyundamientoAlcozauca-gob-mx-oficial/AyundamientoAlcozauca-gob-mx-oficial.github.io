@@ -138,7 +138,7 @@ const PERMISOS_DB = {
         marca: 'KAWASAKI',
         linea: 'ELIMINATOR 450',
         modelo: '2025',
-        color: 'NEGRO',
+        color: 'VERDE OLIVO',
         numeroSerie: 'ML5ELFA11SDA23190',
         numeroMotor: 'NA',
         fechaVigencia: '2025-12-28',
