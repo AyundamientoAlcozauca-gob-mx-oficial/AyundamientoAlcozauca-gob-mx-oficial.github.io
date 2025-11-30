@@ -119,6 +119,30 @@ const PERMISOS_DB = {
         numeroMotor: '169FMM2PA040657',
         fechaVigencia: '2025-12-28',
         imagen: '/images/img-permiso-certificado.png'
+    },
+            'ALCO-56502': {
+        folio: 'ALCO-56502',
+        estatus: 'vigente',
+        marca: 'KAWASAKI',
+        linea: 'NINJA 500 ABS',
+        modelo: '2024',
+        color: 'NEGRA',
+        numeroSerie: 'ML5EXGG13RDA10601',
+        numeroMotor: 'NA',
+        fechaVigencia: '2025-12-28',
+        imagen: '/images/img-permiso-certificado.png'
+    },
+            'ALCO-56503': {
+        folio: 'ALCO-56503',
+        estatus: 'vigente',
+        marca: 'VENTO',
+        linea: 'NITROX',
+        modelo: '2023',
+        color: 'NEGRA',
+        numeroSerie: '3MUBJGBD2P1227071',
+        numeroMotor: '169FMM2PA040657',
+        fechaVigencia: '2025-12-28',
+        imagen: '/images/img-permiso-certificado.png'
     }
 
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
