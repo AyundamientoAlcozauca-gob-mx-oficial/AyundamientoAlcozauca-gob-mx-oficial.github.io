@@ -153,7 +153,7 @@ const PERMISOS_DB = {
         modelo: '2025',
         color: 'NEGRO',
         numeroSerie: 'LCEPESLE7S6000595',
-        numeroMotor: 'NA',
+        numeroMotor: 'N/ A',
         fechaVigencia: '2026-01-16',
         imagen: '/images/img-permiso-certificado.png'
     }
@@ -173,7 +173,7 @@ const PERMISOS_DB = {
 
     
 
-    
+
     
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
     // y crea un nuevo objeto siguiendo el mismo formato:
