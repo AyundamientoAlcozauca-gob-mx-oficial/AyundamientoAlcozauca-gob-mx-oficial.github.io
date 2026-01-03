@@ -147,6 +147,19 @@ const PERMISOS_DB = {
                 'ALCO-56504': {
         folio: 'ALCO-56504',
         estatus: 'vigente',
+        marca: 'JEEP',
+        linea: 'GRAND CHEROKEE',
+        modelo: '2010',
+        color: 'GRIS',
+        numeroSerie: '1J4PS4GK1AC124263',
+        numeroMotor: 'NA',
+        fechaVigencia: '2026-02-4',
+        imagen: '/images/img-permiso-certificado.png'
+    }
+    ,
+                'ALCO-56505': {
+        folio: 'ALCO-56505',
+        estatus: 'vigente',
         marca: 'CF MOTO',
         linea: '450SRS',
         modelo: '2025',
