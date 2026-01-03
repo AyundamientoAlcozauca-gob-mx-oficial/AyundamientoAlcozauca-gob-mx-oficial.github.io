@@ -143,18 +143,6 @@ const PERMISOS_DB = {
         numeroMotor: 'NA',
         fechaVigencia: '2025-12-28',
         imagen: '/images/img-permiso-certificado.png'
-    },
-                'ALCO-56505': {
-        folio: 'ALCO-56505',
-        estatus: 'vigente',
-        marca: 'JEEP',
-        linea: 'GRAND CHEROKEE',
-        modelo: '2010',
-        color: 'GRIS',
-        numeroSerie: '1J4PS4GK1AC124263',
-        numeroMotor: 'NA',
-        fechaVigencia: '2026-02-4',
-        imagen: '/images/img-permiso-certificado.png'
     }
     ,
                 'ALCO-56504': {
@@ -169,7 +157,19 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-01-16',
         imagen: '/images/img-permiso-certificado.png'
     }
-
+,
+                'ALCO-56505': {
+        folio: 'ALCO-56505',
+        estatus: 'vigente',
+        marca: 'JEEP',
+        linea: 'GRAND CHEROKEE',
+        modelo: '2010',
+        color: 'GRIS',
+        numeroSerie: '1J4PS4GK1AC124263',
+        numeroMotor: 'NA',
+        fechaVigencia: '2026-02-4',
+        imagen: '/images/img-permiso-certificado.png'
+    }
 
     
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
