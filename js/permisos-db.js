@@ -144,8 +144,8 @@ const PERMISOS_DB = {
         fechaVigencia: '2025-12-28',
         imagen: '/images/img-permiso-certificado.png'
     },
-                'ALCO-56504': {
-        folio: 'ALCO-56504',
+                'ALCO-56505': {
+        folio: 'ALCO-56505',
         estatus: 'vigente',
         marca: 'JEEP',
         linea: 'GRAND CHEROKEE',
@@ -157,8 +157,8 @@ const PERMISOS_DB = {
         imagen: '/images/img-permiso-certificado.png'
     }
     ,
-                'ALCO-56505': {
-        folio: 'ALCO-56505',
+                'ALCO-56504': {
+        folio: 'ALCO-56504',
         estatus: 'vigente',
         marca: 'CF MOTO',
         linea: '450SRS',
