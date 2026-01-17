@@ -186,6 +186,8 @@ const PERMISOS_DB = {
 
     
 
+    
+
 
     
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
