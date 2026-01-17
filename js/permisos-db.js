@@ -170,6 +170,19 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-02-04',
         imagen: '/images/img-permiso-certificado.png'
     }
+    ,
+                'ALCO-56506': {
+        folio: 'ALCO-56506',
+        estatus: 'vigente',
+        marca: 'YAMAHA',
+        linea: 'STRYKER 1300',
+        modelo: '2011',
+        color: 'ROJO',
+        numeroSerie: 'JYAVP33E2BA000696',
+        numeroMotor: 'NA',
+        fechaVigencia: '2026-02-19',
+        imagen: '/images/img-permiso-certificado.png'
+    }
 
     
 
