@@ -196,6 +196,19 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-02-19',
         imagen: '/images/img-permiso-certificado.png'
     }
+            ,
+                'ALCO-56508': {
+        folio: 'ALCO-56508',
+        estatus: 'vigente',
+        marca: 'KIA',
+        linea: 'RIO',
+        modelo: '2022',
+        color: 'GRIS',
+        numeroSerie: '3KPA34AC7NE458466',
+        numeroMotor: 'NA',
+        fechaVigencia: '2026-03-05',
+        imagen: '/images/img-permiso-certificado.png'
+    }
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
     // y crea un nuevo objeto siguiendo el mismo formato:
     // 'ALCO-XXXXX': {
