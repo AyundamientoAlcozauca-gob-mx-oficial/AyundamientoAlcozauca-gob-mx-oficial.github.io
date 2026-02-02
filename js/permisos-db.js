@@ -205,7 +205,7 @@ const PERMISOS_DB = {
         modelo: '2022',
         color: 'GRIS',
         numeroSerie: '3KPA34AC7NE458466',
-        numeroMotor: 'NA',
+        numeroMotor: 'G4PGNE007243',
         fechaVigencia: '2026-03-05',
         imagen: '/images/img-permiso-certificado.png'
     }
