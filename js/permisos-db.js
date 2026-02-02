@@ -196,7 +196,7 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-02-19',
         imagen: '/images/img-permiso-certificado.png'
     }
-            ,
+         ,
                 'ALCO-56508': {
         folio: 'ALCO-56508',
         estatus: 'vigente',
@@ -210,7 +210,7 @@ const PERMISOS_DB = {
         imagen: '/images/img-permiso-certificado.png'
     }
 
-    
+
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
     // y crea un nuevo objeto siguiendo el mismo formato:
     // 'ALCO-XXXXX': {
