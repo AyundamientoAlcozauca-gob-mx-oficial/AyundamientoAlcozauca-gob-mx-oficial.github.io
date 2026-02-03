@@ -218,7 +218,7 @@ const PERMISOS_DB = {
     //     estatus: 'vigente' o 'vencido',
     //     marca: 'MARCA_DEL_VEHICULO',
     //     linea: 'MODELO_DEL_VEHICULO',
-    //     modelo: 'AÑO',
+    //     modelo: 'AnO',
     //     color: 'COLOR_DEL_VEHICULO',
     //     numeroSerie: 'NUMERO_DE_SERIE',
     //     numeroMotor: 'NUMERO_DE_MOTOR',
