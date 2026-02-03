@@ -209,6 +209,19 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-03-05',
         imagen: '/images/img-permiso-certificado.png'
     }
+             ,
+                'ALCO-56509': {
+        folio: 'ALCO-56509',
+        estatus: 'vigente',
+        marca: 'YAMAHA',
+        linea: 'FZ 07',
+        modelo: '2016',
+        color: 'GRIS',
+        numeroSerie: 'JYARM06E3GA010018',
+        numeroMotor: 'G4PGNE007243',
+        fechaVigencia: '2026-03-05',
+        imagen: '/images/img-permiso-certificado.png'
+    }
 
 
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
