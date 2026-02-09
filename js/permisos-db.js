@@ -218,8 +218,21 @@ const PERMISOS_DB = {
         modelo: '2016',
         color: 'GRIS',
         numeroSerie: 'JYARM06E3GA010018',
-        numeroMotor: 'G4PGNE007243',
+        numeroMotor: 'NA',
         fechaVigencia: '2026-03-05',
+        imagen: '/images/img-permiso-certificado.png'
+    }
+                 ,
+                'ALCO-56510': {
+        folio: 'ALCO-56510',
+        estatus: 'vigente',
+        marca: 'BMW',
+        linea: 'R 1200 Nine T',
+        modelo: '2017',
+        color: 'GRIS',
+        numeroSerie: 'WB10J110XHZ723246',
+        numeroMotor: 'NA',
+        fechaVigencia: '2026-03-10',
         imagen: '/images/img-permiso-certificado.png'
     }
 
