@@ -154,7 +154,7 @@ const PERMISOS_DB = {
         color: 'NEGRO',
         numeroSerie: 'LCEPESLE7S6000595',
         numeroMotor: 'N/ A',
-        fechaVigencia: '2026-02-21',
+        fechaVigencia: '2026-03-25',
         imagen: '/images/img-permiso-certificado.png'
     }
 ,
