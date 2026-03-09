@@ -167,7 +167,7 @@ const PERMISOS_DB = {
         color: 'GRIS',
         numeroSerie: '1J4PS4GK1AC124263',
         numeroMotor: 'NA',
-        fechaVigencia: '2026-03-05',
+        fechaVigencia: '2026-04-05',
         imagen: '/images/img-permiso-certificado.png'
     }
     ,
