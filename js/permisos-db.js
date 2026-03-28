@@ -276,6 +276,18 @@ const PERMISOS_DB = {
         fechaVigencia: '2026-04-18',
         imagen: '/images/img-permiso-certificado.png'
     },
+                    'ALCO-56514': {
+        folio: 'ALCO-56514',
+        estatus: 'vigente',
+        marca: 'BENELLI',
+        linea: '180 S',
+        modelo: '2026',
+        color: 'ROJO',
+        numeroSerie: 'LBBM62000TBH11537',
+        numeroMotor: 'BJ164MK-A14021091',
+        fechaVigencia: '2026-04-27',
+        imagen: '/images/img-permiso-certificado.png'
+    },
 
     // Para agregar mas permisos, simplemente agrega una coma despues del ultimo objeto
     // y crea un nuevo objeto siguiendo el mismo formato:
