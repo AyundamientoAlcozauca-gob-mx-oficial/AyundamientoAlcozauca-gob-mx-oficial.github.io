@@ -289,6 +289,7 @@ const PERMISOS_DB = {
         imagen: '/images/img-permiso-certificado.png'
     },
     
+    
                     'ALCO-56515': {
         folio: 'ALCO-56515',
         estatus: 'vigente',
